@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Convolution calculator</title>
+    <meta name="description" content="Convolution calculator for CNNs.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oliver-ernst.com/convolution-calculator">
+    <meta property="og:title" content="Convolution calculator for CNNs">
+    <meta property="og:description" content="Easily design convolution layers for neural networks.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/smrfeld/convolution-calculator/main/imgs/twitter.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oliver-ernst.com/convolution-calculator">
+    <meta property="twitter:title" content="Convolution calculator for CNNs">
+    <meta property="twitter:description" content="Easily design convolution layers for neural networks.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/smrfeld/convolution-calculator/main/imgs/twitter.png">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Convolution Calculator -->
+    <script src="https://cdn.jsdelivr.net/gh/smrfeld/convolution-calculator/convCalc.min.js"></script>
+</head>
+  <body style="background-color: #FFFCF6;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" style="background-color: #F7F3EA !important;">
+        <a class="navbar-brand" href="index.html">Convolution calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <script>
+            $(document).ready(function() {
+                // Set up
+                ccSetUp();
+            });
+        </script>
+
+        <!--<div id='ccContainer' style="width:800px;"></div>-->
+        <div id='ccContainer' style="padding-top:20px;top:0px;bottom:0px;width:100%;"></div>
+    </div>
+
+  </body>
+</html>

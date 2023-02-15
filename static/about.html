@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Convolution calculator</title>
+    <meta name="description" content="Convolution calculator for CNNs.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oliver-ernst.com/convolution-calculator">
+    <meta property="og:title" content="Convolution calculator for CNNs">
+    <meta property="og:description" content="Easily design convolution layers for neural networks.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/smrfeld/convolution-calculator/main/imgs/twitter.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="">
+    <meta property="twitter:url" content="https://oliver-ernst.com/convolution-calculator">
+    <meta property="twitter:title" content="Convolution calculator for CNNs">
+    <meta property="twitter:description" content="Easily design convolution layers for neural networks.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/smrfeld/convolution-calculator/main/imgs/twitter.png">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Convolution Calculator -->
+    <script src="https://cdn.jsdelivr.net/gh/smrfeld/convolution-calculator/convCalc.min.js"></script>
+  </head>
+  <body style="background-color: #FFFCF6;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" style="background-color: #F7F3EA !important;">
+        <a class="navbar-brand" href="index.html">Convolution calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1>About</h1>
+        
+        <p>
+        This JS calculator helps to calculate parameters for layers in convolution neural networks. 
+        </p>
+
+        <p>
+        It supports inputs which are 2-dimensional such as images or 1-dimensional such as timeseries (set one of the width/height dimensions to 1).
+
+        You can visualize how the different choices tile your input data and what the output sizes will be.
+        </p>
+
+        <p>
+        The basic formula for the number of outputs from the convolution operation is:
+        </p>
+
+        <p>
+        (W−F+2P)/S+1
+        </p>
+
+        <p>
+        where W is the size of the input (width or height), F is filter extent, P is the padding, and S is the stride.
+        Note that for this calculator, only square filters are supported (the filter extent F controls both the width and height of the convolution) 
+        - in reality, non-square convolutions are also possible.
+        </p>
+
+        <h2>Embed this on your site</h2>
+        
+        <p>
+        This is a JS project (relies on jQuery, Bootstrap 4 and Google Material icons). You can embed it on your own page (it is under MIT license).
+        </p>
+
+        <p>
+        You can follow the instructions on the <a href="https://github.com/smrfeld/convolution_calculator">GitHub page</a> of this project, which roughly are:
+        </p>
+        
+        <ol>
+            <li>Add the required jQuery JS, Bootstrap 4 and Google Material icons to your page. <br />
+                    <code> 
+                        &lt;!-- Bootstrap CSS --&gt;<br />
+                        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;<br />
+                        <br />
+                        &lt;!-- Google Material Icons --&gt;<br />
+                        &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;<br />
+                        <br />
+                        &lt;!-- JQuery --&gt;<br />
+                        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;<br />
+                    </code>
+            </li>
+            <li>Add this calculator (using jsDelivr):<br />
+                <code>
+                    &lt;script src="https://cdn.jsdelivr.net/gh/smrfeld/convolution-calculator/convCalc.min.js"&gt;&lt;/script&gt;<br />
+                </code>
+                Alternatively, you can grab the JS file from the <a href="https://github.com/smrfeld/convolution_calculator">GitHub page</a> of this project.
+            </li>
+            <li>Insert the div where the content will be loaded.<br />
+                <code> 
+                    &lt;div id='ccContainer'&gt;&lt;/div&gt;
+                </code>
+                <br />
+                You can also specify the width and height of the drawing; note however that this excludes the controls at the top, only the actual image is resized.
+                <br />
+                <code> 
+                    &lt;div id='ccContainer' style="width:800px;"&gt;&lt;/div&gt;
+                </code>
+                <br />
+            </li>
+            <li>Trigger the JS to inject the drawing into the div when the page loads.<br />
+                <code> 
+                    &lt;script&gt;                <br />
+                        $(document).ready(function() {                <br />
+                            // Set up                <br />
+                            ccSetUp();                <br />
+                        });                <br />
+                    &lt;/script&gt;
+                </code>
+            </li>
+        </ol>
+          
+        <h2>GitHub</h2>
+
+        <p>
+        You can visit this project on its <a href="https://github.com/smrfeld/convolution_calculator">GitHub page</a>. You can also complain here about problems :)
+        </p>
+
+        <footer style="text-align: center">
+            Created by <a href="https://oliver-ernst.com">Oliver K. Ernst</a> (2021). 
+            <br />
+            Released under MIT license.
+        </footer>
+    </div>
+
+  </body>
+</html>
