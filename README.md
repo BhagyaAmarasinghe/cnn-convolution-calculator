@@ -2,9 +2,7 @@
 
 This is a calculator to help you construct convolution layers in neural networks.
 
-See the finished product at [https://oliver-ernst.com/convolution-calculator](https://oliver-ernst.com/convolution-calculator).
-
-Or, embed this calculator on your own site by following the instructions below.
+You can embed this calculator on your own site by following the instructions below.
 
 <img src="imgs/twitter.png" alt="drawing" width="600"/>
 
